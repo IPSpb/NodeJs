@@ -11,6 +11,7 @@ var server = new http.Server(function(req, res) {
     console.log( req.method, req.url );
 //    res.end(); // Ответить необходимо, иначе запрос зависнет
     var urlParsed = url.parse(req.url, true);
+    debugger;
     console.log(urlParsed);
 
     if (urlParsed.pathname == '/echo' && urlParsed.query.message) {
